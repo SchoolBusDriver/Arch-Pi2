@@ -462,7 +462,7 @@ Add the following to the very bottom:
     temp_limit=80
 ____
 
-# Clean up Disk Space of locally stored cached Arch Linux Packages #
+# Clean up Arch Linux Packages Cache#
 
     pacman -Scc && pacman -Sc
     
