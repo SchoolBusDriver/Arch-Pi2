@@ -20,9 +20,9 @@ _____
 8. Select OK at bottom when done
 
 9. Restart Kodi
-
-    systemctl restart kodi
-
+```
+systemctl restart kodi
+```
 10. Launch Backup Add-on and do a Backup
 
 11. Copy the "201601121039.zip" looking zip file to local PC for restoring to other Kodi Boxes
@@ -458,9 +458,9 @@ ____
 
 5. Restart Kodi
 Important Note: You MUST restart kodi for your restore to work correctly. Otherwise, it will fail.
-
-    systemctl restart kodi
-
+```
+systemctl restart kodi
+```
 5. Launch Backup Add-on and select Restore and the backup file from the list
 
 6. It may have errors or require you to copy to the backup file to the /var/lib/kodi/.kodi/temp folder.
