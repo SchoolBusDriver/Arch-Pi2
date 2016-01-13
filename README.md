@@ -72,7 +72,7 @@ Select a time zone:
 
 Create the symbolic link /etc/localtime, where Zone/Subzone is the TZ value from tzselect:
 
-    ln -s /usr/share/zoneinfo/America/Eastern /etc/localtime
+    ln -s /usr/share/zoneinfo/America/New_York /etc/localtime
 
 Set Hardware clock to UTC:
 
