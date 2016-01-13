@@ -230,6 +230,7 @@ Add syntax highlighting to to /etc/nanorc
 Change the following:
 
     [Journal]
+    Storage=auto
     SystemMaxUse=10M
     SystemMaxFileSize=1M
     RuntimeMaxUse=10M
