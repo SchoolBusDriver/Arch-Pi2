@@ -195,6 +195,21 @@ Add syntax highlighting to to /etc/nanorc
 
     cat /usr/share/nano-syntax-highlighting/nanorc.sample >> /etc/nanorc
 
+## Journal Log File Tweaks: ##
+
+    nano /etc/systemd/journald.conf
+
+Change the following:
+
+    [Journal]
+    SystemMaxUse=10M
+    SystemMaxFileSize=1M
+    RuntimeMaxUse=10M
+    RuntimeMaxFileSize=1M
+    MaxRetentionSec=7 day
+    MaxFileSec=1 week
+    ForwardToSyslog=no
+
 ## Install Alsi ##
 
 Install Alsi:
