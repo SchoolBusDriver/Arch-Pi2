@@ -72,7 +72,7 @@ Select a time zone:
 
 Create the symbolic link /etc/localtime, where Zone/Subzone is the TZ value from tzselect:
 
-    ln -s /usr/share/zoneinfo/America/Eastern /etc/localtime
+    ln -s /usr/share/zoneinfo/America/New_York /etc/localtime
 
 Set Hardware clock to UTC:
 
@@ -109,7 +109,7 @@ Create /etc/locale.conf, where LANG refers to the first column of an uncommented
 
 ## System Update: ##
 
-    pacman -Sy pacman
+    pacman -Sy pacman base-devel
     pacman-key --init
     pacman -S archlinux-keyring
     pacman-key --populate archlinux
@@ -230,6 +230,7 @@ Add syntax highlighting to to /etc/nanorc
 Change the following:
 
     [Journal]
+    Storage=auto
     SystemMaxUse=10M
     SystemMaxFileSize=1M
     RuntimeMaxUse=10M
@@ -380,9 +381,9 @@ Download Kodi Splash Image:
 
     pacman -S mkinitcpio
 
-Modify /usr/lib/initcpio/init on line 35:
+Modify /usr/lib/initcpio/init on line 33:
 
-    nano +35 /usr/lib/initcpio/init
+    nano +33 /usr/lib/initcpio/init
 
 Add the following:
 
@@ -459,7 +460,13 @@ Add the following to the very bottom:
     core_freq=500
     over_voltage=2
     temp_limit=80
+____
 
+# Clean up Arch Linux Packages Cache#
+
+    pacman -Scc && pacman -Sc
+    
+Note: Yes to all questions
 ____
 
 # Restoring Kodi Backup #
@@ -470,23 +477,28 @@ ____
 
 3. Set the correct permissions
 
-    chown -R kodi:kodi *.zip
+```
+chown -R kodi:kodi *.zip
+```
 
-4. Configure it per the instructions at the top of this wiki
+Configure the Backup Add-on per the instructions at the top of this wiki
 
-5. Restart Kodi
-Important Note: You MUST restart kodi for your restore to work correctly. Otherwise, it will fail.
+**Important Note: You MUST restart kodi for your restore to work correctly. Otherwise, it will fail.**
+
 ```
 systemctl restart kodi
 ```
 Launch Backup Add-on and select Restore and the backup file from the list
 
-It may have errors or require you to copy to the backup file to the /var/lib/kodi/.kodi/temp folder.
+**Kodi Restore Notes:**
+* It may have errors or require you to copy to the backup file to the /var/lib/kodi/.kodi/temp folder.
 
-To monitor the restore process to determine if there are any errors
+* To monitor the restore process to determine if there are any errors you need to correct 
 
-    cd /var/lib/kodi/.kodi/temp
+```
+cd /var/lib/kodi/.kodi/temp
 
-    tail -f kodi.log
+tail -f kodi.log
+```
 
-7. If you restored from an Openelec Kodi, go delete the openelec add-on and repository or else it can cause problems.
+If you restored from an Openelec Kodi, go delete the openelec add-on and repository or else it can cause problems.
