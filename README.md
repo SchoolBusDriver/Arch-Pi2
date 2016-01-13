@@ -19,13 +19,15 @@ _____
 
 8. Select OK at bottom when done
 
-8. Restart Kodi
+9. Restart Kodi
 
     systemctl restart kodi
 
-9. Launch Backup Add-on and do a Backup
+10. Launch Backup Add-on and do a Backup
 
-10. Copy the "201601121039.zip" looking zip file to local PC for restoring to other Kodi Boxes
+11. Copy the "201601121039.zip" looking zip file to local PC for restoring to other Kodi Boxes
+
+____
 
 # Arch Linux Tweaks: #
 
@@ -440,6 +442,8 @@ Add the following to the very bottom:
     over_voltage=2
     temp_limit=80
 
+____
+
 # Restoring Kodi Backup #
 
 1. Copy backup zip file to /var/lib/kodi
@@ -450,9 +454,9 @@ Add the following to the very bottom:
 
     chown -R kodi:kodi *.zip
 
-3. Configure it per the instructions at the top of this wiki
+4. Configure it per the instructions at the top of this wiki
 
-4. Restart Kodi
+5. Restart Kodi
 Important Note: You MUST restart kodi for your restore to work correctly. Otherwise, it will fail.
 
     systemctl restart kodi
