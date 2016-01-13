@@ -295,6 +295,12 @@ At the very bottom edit gpu_mem:
 
     gpu_mem=256
 
+**NOTE: Depending on the TV you will probably also want to disable overscan.**
+
+uncomment the following in the middle of the /boot/config.txt
+
+    disable_overscan=1
+
 Reboot:
 
     reboot
