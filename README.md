@@ -460,7 +460,13 @@ Add the following to the very bottom:
     core_freq=500
     over_voltage=2
     temp_limit=80
+____
 
+# Clean up Disk Space of locally stored cached Arch Linux Packages #
+
+    pacman -Scc && pacman -Sc
+    
+Note: Yes to all questions
 ____
 
 # Restoring Kodi Backup #
