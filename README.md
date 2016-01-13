@@ -109,7 +109,7 @@ Create /etc/locale.conf, where LANG refers to the first column of an uncommented
 
 ## System Update: ##
 
-    pacman -Sy pacman
+    pacman -Sy pacman base-devel
     pacman-key --init
     pacman -S archlinux-keyring
     pacman-key --populate archlinux
