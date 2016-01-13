@@ -91,7 +91,7 @@ Create /etc/locale.conf, where LANG refers to the first column of an uncommented
 ## Reboot: ##
 
     reboot
-_________________________________________
+_____
 
 # Wireless: #
 
@@ -270,7 +270,31 @@ At the very bottom edit gpu_mem:
 Reboot:
 
     reboot
-____
+___
+
+# Remote Controller Tweaks: #
+
+Install lirc-utils
+
+    pacman -S lirc-utils python
+
+Rename Original lirc_options.conf
+
+    cd /etc/lirc && mv lirc_options.conf lirc_options.conf-org
+
+Download new lirc_options.conf
+
+    wget https://raw.githubusercontent.com/SchoolBusDriver/Arch-Pi2/master/lirc/lirc_options.conf
+
+Download Lirc devinput
+
+    cd /etc/lirc/lircd.conf.d
+    irdb-get download devinput/devinput.lircd.conf
+
+Enable Lirc on Boot
+
+    systemctl enable lircd
+___
 
 # Plymouth Boot Splash: #
 
@@ -374,8 +398,7 @@ Should look like this when finished:
 Reboot:
 
     reboot
-
-_____
+___
 
 # Pi 2 Speed Tweak: #
 
