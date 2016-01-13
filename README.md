@@ -381,9 +381,9 @@ Download Kodi Splash Image:
 
     pacman -S mkinitcpio
 
-Modify /usr/lib/initcpio/init on line 35:
+Modify /usr/lib/initcpio/init on line 33:
 
-    nano +35 /usr/lib/initcpio/init
+    nano +33 /usr/lib/initcpio/init
 
 Add the following:
 
