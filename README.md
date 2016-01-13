@@ -490,4 +490,4 @@ To monitor the restore process to determine if there are any errors
 
     tail -f kodi.log
 
-7. If you restored from an Openelec Kodi, go delete the openelec add-on and repository or else it can cause problems.
+If you restored from an Openelec Kodi, go delete the openelec add-on and repository or else it can cause problems.
