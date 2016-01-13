@@ -1,6 +1,32 @@
 # Arch Pi 2 Setup #
 _____
 
+# Backup Existing Tweaked Kodi #
+
+1. Install Backup Add-on within Tweaked Kodi
+
+2. Select Configure
+
+3. Set Backup Path to Kodi Home Folder (should only have to select Home Folder)
+
+4. Select Compress Archives
+
+5. Goto File Selection on Left Hand Side of Screen
+
+6. Select Addon Data and Profiles
+
+7. Add Custom folders (Like Artwork in Home Folder)
+
+8. Select OK at bottom when done
+
+8. Restart Kodi
+
+    systemctl restart kodi
+
+9. Launch Backup Add-on and do a Backup
+
+10. Copy the "201601121039.zip" looking zip file to local PC for restoring to other Kodi Boxes
+
 # Arch Linux Tweaks: #
 
 ## Disable tmpfs for /tmp since our RAM is limited: ##
@@ -413,3 +439,32 @@ Add the following to the very bottom:
     core_freq=500
     over_voltage=2
     temp_limit=80
+
+# Restoring Kodi Backup #
+
+1. Copy backup zip file to /var/lib/kodi
+
+2. On new Kodi Installtion install Backup Add-on
+
+3. Set the correct permissions
+
+    chown -R kodi:kodi *.zip
+
+3. Configure it per the instructions at the top of this wiki
+
+4. Restart Kodi
+Important Note: You MUST restart kodi for your restore to work correctly. Otherwise, it will fail.
+
+    systemctl restart kodi
+
+5. Launch Backup Add-on and select Restore and the backup file from the list
+
+6. It may have errors or require you to copy to the backup file to the /var/lib/kodi/.kodi/temp folder.
+
+To monitor the restore process to determine if there are any errors
+
+    cd /var/lib/kodi/.kodi/temp
+
+    tail -f kodi.log
+
+7. If you restored from an Openelec Kodi, go delete the openelec add-on and repository or else it can cause problems.
