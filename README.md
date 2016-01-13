@@ -476,6 +476,7 @@ ____
 4. Configure it per the instructions at the top of this wiki
 
 5. Restart Kodi
+
 **Important Note: You MUST restart kodi for your restore to work correctly. Otherwise, it will fail.**
 
 ```
