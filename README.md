@@ -287,6 +287,16 @@ Enable Kodi to start on Boot:
 
     systemctl enable kodi
 
+Add Increased Cache Buffer:
+
+    cd /var/lib/kodi/.kodi/userdata
+
+wget 
+
+Change Permissions of advancedsettings.xml
+
+    chown kodi:kodi advancedsettings.xml
+
 Increase RAM to GPU:
 
     nano /boot/config.txt
@@ -295,7 +305,7 @@ At the very bottom edit gpu_mem:
 
     gpu_mem=256
 
-**NOTE: Depending on the TV you will probably also want to disable overscan.**
+**NOTE: Depending on the TV you will probably also want to disable overscan. Be sure to set Aspect Ratio on TV to Full or Dot for Dot**
 
 uncomment the following in the middle of the /boot/config.txt
 
