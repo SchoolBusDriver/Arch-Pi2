@@ -1,4 +1,4 @@
-# Arch Pi 2 Setup #
+# Arch Linux / Rasberry Pi 2 / Kodi Guide #
 _____
 
 # Backup Existing Tweaked Kodi #
