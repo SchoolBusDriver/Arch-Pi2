@@ -477,12 +477,11 @@ ____
 
 3. Set the correct permissions
 
+```
+chown -R kodi:kodi *.zip
+```
 
-    chown -R kodi:kodi *.zip
-
-Configure it per the instructions at the top of this wiki
-
-Restart Kodi
+Configure the Backup Add-on per the instructions at the top of this wiki
 
 **Important Note: You MUST restart kodi for your restore to work correctly. Otherwise, it will fail.**
 
@@ -491,12 +490,15 @@ systemctl restart kodi
 ```
 Launch Backup Add-on and select Restore and the backup file from the list
 
-It may have errors or require you to copy to the backup file to the /var/lib/kodi/.kodi/temp folder.
+**Kodi Restore Notes:**
+* It may have errors or require you to copy to the backup file to the /var/lib/kodi/.kodi/temp folder.
 
-To monitor the restore process to determine if there are any errors you need to correct 
+* To monitor the restore process to determine if there are any errors you need to correct 
 
-    cd /var/lib/kodi/.kodi/temp
+```
+cd /var/lib/kodi/.kodi/temp
 
-    tail -f kodi.log
+tail -f kodi.log
+```
 
 If you restored from an Openelec Kodi, go delete the openelec add-on and repository or else it can cause problems.
