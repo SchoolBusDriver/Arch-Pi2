@@ -291,7 +291,9 @@ Add Increased Cache Buffer:
 
     cd /var/lib/kodi/.kodi/userdata
 
-wget 
+Download advancedsettings.xml:
+
+    wget https://raw.githubusercontent.com/SchoolBusDriver/Arch-Pi2/master/kodi/advancedsettings.xml
 
 Change Permissions of advancedsettings.xml
 
